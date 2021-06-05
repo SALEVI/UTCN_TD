@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Oriflame by Somi</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/vue-material.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/perfume-service.js"></script>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <a href="/index.html" id="logo"
+        ><img
+          class="logo"
+          src="/src/assets/logoWhite.png"
+          alt="Oriflame by Somi"
+      /></a>
+      <div id="navbar-right">
+        <a href="add.html?"
+          ><img
+            class="logo2"
+            src="/src/assets/plus.png"
+            alt="add parfume"
+          />Adauga parfume</a
+        >
+      </div>
+    </div>
+
+    <div id="app">
+      <br />
+      <br />
+      <br />
+      <br />
+      <ul class="user-list" v-if="perfumes.length > 0">
+        <li>
+          <div class="user-row-header">
+            <div class="user-name"></div>
+            <div class="user-name">Nume</div>
+            <div class="user-city">Brand</div>
+            <div class="user-city">Preț</div>
+            <div class="user-city">Marime</div>
+            <div class="user-city" id="moveme">Opțiuni</div>
+          </div>
+        </li>
+
+        <li v-for="perfume in perfumes">
+          <div class="asd">
+            <span class="user-city"
+              ><img :src="perfume.photo" class="box"
+            /></span>
+            <a
+              class="user-city"
+              id="name-link"
+              :href="'details.html?id='+perfume.id"
+              >{{ perfume.name }}</a
+            >
+            <span class="user-city"><i>{{ perfume.brand }}</i></span>
+            <span class="user-city"><i>{{ perfume.price }} lei</i></span>
+            <span class="user-city"><i>{{ perfume.size }}</i></span>
+            <button class="bn5" v-on:click="deletePerfume(perfume.id)">
+              Șterge
+            </button>
+            <button class="bn5">
+              <a :href="'update.html?id='+perfume.id" target="_self"
+              style="text-decoration: none;">Modifică</a
+              >
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>

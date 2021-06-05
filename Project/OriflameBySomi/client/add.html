@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <link rel="stylesheet" href="styles/add.css" />
+    <title>Add perfume | Oriflame by Somi</title>
+  </head>
+  <body>
+    <div class="titleOfPage">Adauga un parfum</div>
+    <div id="add">
+      <p>Foto: <input type="text" v-model="perfume.photo" /></p>
+      <p>Nume: <input type="text" v-model="perfume.name" /></p>
+      <p>Brand: <input type="text" v-model="perfume.brand" /></p>
+      <p>Preț (în lei): <input type="text" v-model="perfume.price" /></p>
+      <p>Marime: <input type="text" v-model="perfume.size" /></p>
+      <p>Cod: <input type="text" v-model="perfume.cod" /></p>
+      <p>Descriere: <input type="text" v-model="perfume.description" /></p>
+      <p>Ingrediente: <input type="text" v-model="perfume.ingridients" /></p>
+      <button class="bn5"><a href="index.html">Inapoi</a></button>
+      <button class="bn5" v-on:click="add(perfume)">Salvează</button>
+      <p>{{message}}</p>
+    </div>
+    <script src="src/add.js"></script>
+  </body>
+</html>

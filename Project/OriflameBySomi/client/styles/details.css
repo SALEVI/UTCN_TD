@@ -1,0 +1,147 @@
+body {
+    background: url("/src/assets/spikes.png");
+    font-family: 'Roboto', sans-serif;
+}
+
+#details{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px 35px 25px 35px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-radius: 6px;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    padding-left: 38%;
+}
+
+.container {
+    display:flex;
+    background-color: #dedede;
+    padding:1px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:50%;
+    margin: auto;
+}
+
+.label-name{
+    padding:20px;
+    flex:1;
+    background-color:white;
+    text-transform: uppercase;
+}
+
+.value-name{
+    padding: 20px;
+    background-color: black;
+    color: turquoise;
+    flex:1;
+    font-weight: bold;    
+}
+
+.label {
+    padding:20px;
+    flex:1;
+    background-color:white;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 3px 0px #ccc;
+}
+
+.value {
+    padding: 20px;
+    background-color: black;
+    color: turquoise;
+    flex:1;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.bn5 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-right: 20px;
+  }
+  
+  .bn5:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingbn5 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bn5:active {
+    color: #000;
+  }
+  
+  .bn5:active:after {
+    background: transparent;
+  }
+  
+  .bn5:hover:before {
+    opacity: 1;
+  }
+  
+  .bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }

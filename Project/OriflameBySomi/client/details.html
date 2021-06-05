@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+    <button class="bn5"><a href="index.html">Inapoi</a></button>
+    <div id="details">
+        <h1>Detalii pt produsul: {{ id }}</h1>
+        <img :src="perfume.photo" height="300px">
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label-name">Nume:</div>
+            <div class="value-name">{{perfume.name}}</div>
+        </div>
+
+        <div class="label">Brand:</div>
+        <div class="value">{{perfume.brand}}</div>
+
+        <div class="label">Preț:</div>
+        <div class="value">{{perfume.price}} lei</div>
+
+        <div class="label">Marime:</div>
+        <div class="value">{{perfume.size}}</div>
+
+        <div class="label">Cod:</div>
+        <div class="value">{{perfume.cod}}</div>
+
+        <p><span style="font-weight: bold">Descriere: </span>{{perfume.description}}</p>
+        <p><span style="font-weight: bold">Ingrediente: </span>{{perfume.ingridients}}</p>
+    </div>
+    <script src="src/details.js"></script>
+</body>
+
+</html>
