@@ -1,16 +1,15 @@
 <html>
 <head>
     <script type="text/javascript" src="libs/vue.js"></script><script type="text/javascript" src="libs/axios.js"></script>
-    <script type="text/javascript" src="libs/axios.js"></script>
     <link rel="stylesheet" href="styles/add.css" />
     <title>Modify perfume | Oriflame by Somi</title>
 </head>
 <body>
 <div class="titleOfPage">Modifica un parfum</div>
-<div id="add">
-    <p>Copertă: <input type="text" v-model="perfume.photo"></p>
-    <p>Titlu: <input type="text" v-model="perfume.name"></p>
-    <p>Editură: <input type="text" v-model="perfume.brand"></p>
+<div id="update" class="add">
+    <p>Foto: <input type="text" v-model="perfume.photo"></p>
+    <p>Nume: <input type="text" v-model="perfume.name"></p>
+    <p>Brand: <input type="text" v-model="perfume.brand"></p>
     <p>Preț (în lei): <input type="text" v-model="perfume.price"></p>
     <p>Marime: <input type="text" v-model="perfume.size"></p>
     <p>Cod: <input type="text" v-model="perfume.cod"></p>
@@ -18,6 +17,7 @@
     <p>Ingrediente: <input type="text" v-model="perfume.ingridients"></p>
     <button class="bn5"><a href="index.html">Inapoi</a></button>
     <button class="bn5" v-on:click="update(perfume.id)">Salvează</button>
+    <p>{{message}}</p>
 </div>
 <script src="src/update.js"></script>
 </body>
