@@ -8,9 +8,7 @@ function run() {
       },
       created: function () {
         this.perfumesService = perfumes();
-        console.log(perfumes());
         this.perfumesService.get().then(response => (this.perfumes = response.data));
-        console.log( this.perfumes );
       },
       methods: {
         deletePerfume: function(id) {
@@ -22,7 +20,7 @@ function run() {
       }
     });
   
-  //  indexComponent.use(VueMaterial);
+    indexComponent.use(VueMaterial);
   
   }
   

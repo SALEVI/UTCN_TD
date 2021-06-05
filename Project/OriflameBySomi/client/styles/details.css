@@ -21,6 +21,10 @@ img{
     padding-left: 38%;
 }
 
+span {
+  font-weight: bold;
+}
+
 .container {
     display:flex;
     background-color: #dedede;
