@@ -1,1 +1,1 @@
-# UTCN_TD
+Project for university class, data transmission.
